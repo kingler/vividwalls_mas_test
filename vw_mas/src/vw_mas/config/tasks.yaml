@@ -1,0 +1,148 @@
+  marketing_agent_task:
+    agent: marketing_agent
+    description: >
+      - Develop comprehensive, data-driven marketing strategies to increase digital footprint and market penetration as per strategic goals.
+      - Supervise multi-channel execution, utilizing project management tools to ensure timely delivery and milestone achievement.
+      - Employ analytics tools to refine targeting and optimize budget allocation, with regular adjustments based on campaign data insights.
+    expected_output: >
+      A detailed report on the marketing strategy execution, effectiveness, and real-time adjustments, formatted in markdown and sent via SMS.
+    tools: [analytics_tool, project_management_tool]
+
+  market_research_agent_task:
+    agent: market_research_agent
+    description: >
+      - Analyze diverse market data sources to identify trends and insights that impact marketing strategies.
+      - Conduct in-depth qualitative and quantitative research to refine the understanding of consumer behavior and market dynamics.
+      - Collaborate with marketing, social media, and content teams to provide data-driven insights that inform campaign strategies and content development.
+    expected_output: >
+      Comprehensive market research reports with detailed analysis, actionable insights, and strategic recommendations, 
+      formatted in markdown and sent via SMS, empowering the marketing team to make informed decisions.
+    tools: [data_analysis_tool, survey_tool]
+
+### Detail specific, measurable objectives that the Notion agent should achieve within the framework of the marketing operations.
+### Emphasize how the backstory's experiences directly contribute to the agent’s current capabilities and responsibilities.
+### This approach for the notion_agent enhances its role as a central hub for data management and 
+### coordination within the marketing campaign framework, ensuring that all campaign information is accurate, up-to-date, and accessible
+  notion_agent_task: 
+    agent: notion_agent
+    description: >
+      - Manage and update campaign data within Notion for real-time accessibility, using the Notion API.
+      - Create, retrieve, update, and manage databases and pages to ensure all campaign information is up-to-date and accurate.
+      - Utilize the Query a Database function to filter and retrieve relevant campaign data as needed.
+      - Create new campaign pages and databases for upcoming marketing initiatives.
+      - Update existing database properties to align with evolving campaign strategies.
+      - Manage blocks within pages to update task lists, progress markers, and schedule timelines.
+      - Append new block children for dynamic content updates and campaign milestones.
+      - Search through pages, databases, and user contributions to quickly locate and organize campaign information.
+      - Leverage user and comment functionalities to facilitate team communication and feedback on campaign pages.
+      - Utilize Notion API to manage and update real-time campaign data, ensuring seamless integration across marketing channels.
+      - Create, manage, and synchronize campaign schedules, deadlines, and deliverables within Notion, providing real-time updates and notifications to all stakeholders.
+      - Maintain and regularly audit a centralized repository of campaign assets to ensure accuracy and ease of access.
+    expected_output: >
+      Updated entries in the Notion database, reflecting the latest campaign data and assets, with change logs and access reports. The updates include new databases and pages created for campaigns, modifications to existing entries, and detailed logs of changes made using the Notion API.
+      Regularly updated Notion database entries reflecting the latest campaign data and assets, complete with change logs and access reports, ensuring all stakeholders are informed and aligned.
+    tools: [notion_api_tool]
+
+  campaign_agent_task:
+    agent: campaign_agent
+    description: >
+      - Coordinate the planning and execution of marketing campaigns.
+      - Manage campaign timelines and milestones.
+      - Facilitate communication and strategy implementation across teams.
+      - Monitor campaign performance and make data-driven adjustments.
+      - Conduct detailed post-campaign analysis.
+      - Manage the entire lifecycle of marketing campaigns from initiation to closure, coordinating with various teams to ensure seamless execution.
+      - Employ project management tools to keep all campaign elements on track and within budget, providing regular status updates to stakeholders.
+      - Utilize real-time analytics to adjust campaign strategies, focusing on maximizing engagement and conversions.
+    expected_output: >
+      A comprehensive campaign management report detailing execution, timeline adherence, performance metrics, and post-campaign insights, formatted in markdown and sent via SMS.
+      Detailed campaign management reports showcasing timeline adherence, budget management, performance metrics, and strategic insights for future campaigns, formatted in markdown and
+    tools: [project_management_tool, analytics_tool]
+
+  content_strategy_agent_task:
+    agent: content_strategy_agent
+    description: >
+      - Develop and distribute SEO-optimized content across platforms.
+      - Create and manage a content calendar aligned with marketing goals.
+      - Oversee content production, ensuring SEO best practices.
+      - Develop and execute a comprehensive content strategy across all digital platforms, ensuring alignment with the overall marketing objectives.
+      - Manage the creation of engaging, SEO-optimized content, coordinating with social media and marketing teams to maximize reach and impact.
+      - Analyze content performance across various channels, using insights to
+    expected_output: >
+      A detailed content strategy report including SEO performance, calendar schedules, and collaboration notes, formatted in markdown and sent via SMS.
+    tools: [seo_tool, content_management_system]
+
+  social_media_agent_task:
+    agent: social_media_agent
+    description: >
+      - Orchestrate the creation and distribution of post and ad campaign content across all social media platforms.
+      - Request post and ad campaign scheduling from notion_agent
+      - Use social media management tools to Coordinate scheduling and posting of content across social media platforms.
+      - Monitor engagement metrics and adjust content strategies based on data.
+      - Collaborate with platform-specific agents to optimize content.
+    expected_output: >
+      A comprehensive report on social media activities, engagement metrics, and strategy adjustments, formatted in markdown and sent via SMS.
+    tools: [social_media_management_tool, analytics_tool]
+
+  facebook_agent_task:
+   agent: facebook_agent
+   description: >
+    - Utilize the Meta Ads API to manage all aspects of Facebook campaigns.
+    - Authenticate using OAuth 2.0 to obtain access tokens necessary for interacting with the Meta API.
+    - Use the Graph API to create and manage posts on Facebook Pages, including uploading images and linking to external content.
+    - Create and manage ad campaigns, set up ad sets within these campaigns with specific targeting, budget, and scheduling strategies.
+    - Design and manage individual ads, modifying creative elements, setting targeting specifics, and adjusting budget allocations.
+    - Fetch detailed analytics about campaign performance using the Insights API, analyzing metrics like impressions, clicks, and conversion rates.
+    - Implement the Facebook Pixel to track user activities on websites for retargeting and conversion tracking.
+    - Utilize the Conversion API to send server-side events to Facebook, ensuring data accuracy and compliance with browser restrictions on cookies.
+   expected_output: >
+    Detailed CRUD log and performance report of Facebook campaigns, including A/B testing outcomes, engagement analytics, and insights from ad performance analytics, formatted in markdown and sent via more appropriate channels like email or a web-based dashboard.
+   tools: [facebook_api_tool]
+
+  instagram_agent_task:
+    agent: instagram_agent
+    description: >
+      - Utilize the Meta Ads API to manage all aspects of Instagram campaigns.
+      - Authenticate using OAuth 2.0 to obtain access tokens necessary for interacting with the Meta API.
+      - Use the Graph API to create and manage posts on Instagram, including uploading images, stories, and IGTV content.
+      - Create and manage ad campaigns, set up ad sets within these campaigns with specific targeting, budget, and scheduling strategies.
+      - Design and manage individual ads, modifying creative elements, setting targeting specifics, and adjusting budget allocations.
+      - Fetch detailed analytics about campaign performance using the Insights API, analyzing metrics like impressions, clicks, and conversion rates.
+      - Implement the Instagram Pixel (part of the Facebook Pixel integration) to track user activities on websites for retargeting and conversion tracking.
+      - Utilize the Conversion API to send server-side events to Instagram, ensuring data accuracy and compliance with browser restrictions on cookies.
+    expected_output: >
+      Detailed CRUD log and performance report of Instagram campaigns, including influencer collaborations, engagement analytics, and insights from ad performance analytics, formatted in markdown and sent via more appropriate channels like email or a web-based dashboard.
+    tools: [instagram_api_tool] 
+
+  linkedin_agent_task:
+    agent: linkedin_agent
+    description: >
+      - Oversee LinkedIn content and campaign management.
+      - Utilize LinkedIn Analytics to refine strategies.
+      - Engage with networks to foster strategic partnerships.
+    expected_output: >
+      A comprehensive LinkedIn campaign report detailing content strategies, networking outcomes, and analytics insights, formatted in markdown and sent via SMS.
+    tools: [linkedin_marketing_solutions_tool]
+
+  pinterest_agent_task:
+   agent: pinterest_agent
+   description: >
+    - Manage Pinterest content and advertising campaigns using the Pinterest API.
+    - Use API functionalities to create, run, edit, and manage ad campaigns with features such as audience targeting, bulk ads management, and keyword targeting.
+    - Utilize the Ads analytics to fetch detailed performance metrics including impressions, clicks, and conversion rates.
+    - Manage product catalogs using Pinterest's API for Shopping, enabling real-time updates and maintenance of product data.
+    - Implement Pinterest tags and use the Conversion API for enhanced tracking of user actions and conversion optimization.
+  expected_output: >
+    Detailed performance analysis of Pinterest campaigns, including visual strategy effectiveness and conversion rates, formatted in markdown and sent via more appropriate channels like email or a web-based dashboard.
+  tools: [pinterest_ad_manager_tool]
+
+
+  marketing_reporting_analyst_task:
+    agent: marketing_reporting_analyst_agent
+    description: >
+      - Analyze campaign performance across all channels.
+      - Provide insights to refine and optimize marketing strategies based on data.
+    expected_output: >
+      A detailed performance analysis report across all marketing channels, offering strategic recommendations, stored in markdown format and sent via SMS.
+    tools: [analytics_tool]
+

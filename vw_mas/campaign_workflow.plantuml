@@ -1,0 +1,47 @@
+@startuml
+!define AGENT(x) class x << (A,orchid) >>
+!define DATABASE(x) class x << (D,lightblue) >>
+!define API(x) class x << (I,yellow) >>
+!define PROCESS(x) class x << (P,green) >>
+
+AGENT(Social_Media_Campaign_Agent)
+AGENT(Market_Research_Agent)
+AGENT(Technical_Writer_Agent)
+AGENT(Marketing_Agent)
+AGENT(Image_Analysis_Agent)
+AGENT(Notion_Agent)
+DATABASE(Supabase)
+API(Social_Media_APIs)
+API(SMS_Gateway)
+PROCESS(Notion_Calendar)
+API(Market_Trend_Tools)
+
+' Initialize campaign based on Notion calendar
+Notion_Calendar --> Social_Media_Campaign_Agent : Triggers campaign creation\nbased on schedule
+note right: Notion Calendar schedules\nand triggers campaign processes
+
+' Image retrieval and analysis
+Supabase --> Image_Analysis_Agent : Retrieves images for campaigns
+Image_Analysis_Agent --> Social_Media_Campaign_Agent : Provides analyzed images
+note right: Image Analysis Agent processes\nimages for optimal ad visuals
+
+' Market research for campaign strategy
+Market_Trend_Tools --> Market_Research_Agent : Provides market trends and data
+Market_Research_Agent --> Technical_Writer_Agent : Creates initial ad copy and strategy report
+note left: Market Research Agent analyzes\ndata to inform campaign strategy
+
+' Ad copy refinement and initial approval
+Technical_Writer_Agent --> Marketing_Agent : Refines and submits ad copy for review
+Marketing_Agent --> Notion_Agent : Updates campaign draft in Notion
+note left: Technical Writer refines ad copy\nMarketing Agent reviews and manages quality
+
+' Sending draft for external approval via SMS
+Notion_Agent --> SMS_Gateway : Sends draft ad for approval via text message
+note right: Notion Agent sends SMS for approval\nusing an SMS Gateway like Twilio
+
+' Final decision and campaign execution
+SMS_Gateway --> Marketing_Agent : Receives approval or rejection
+Marketing_Agent --> Social_Media_APIs : Posts ad if approved
+note left: Marketing Agent finalizes or revises\nthe ad based on approval status
+
+@enduml
