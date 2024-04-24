@@ -1,6 +1,8 @@
   marketing_agent_task:
     agent: marketing_agent
     description: >
+      - Oversee the development and execution of comprehensive, data-driven marketing strategies.
+      - Regularly interact with content and social media teams to ensure alignment and cohesion in messaging.
       - Develop comprehensive, data-driven marketing strategies to increase digital footprint and market penetration as per strategic goals.
       - Supervise multi-channel execution, utilizing project management tools to ensure timely delivery and milestone achievement.
       - Employ analytics tools to refine targeting and optimize budget allocation, with regular adjustments based on campaign data insights.
@@ -19,10 +21,6 @@
       formatted in markdown and sent via SMS, empowering the marketing team to make informed decisions.
     tools: [data_analysis_tool, survey_tool]
 
-### Detail specific, measurable objectives that the Notion agent should achieve within the framework of the marketing operations.
-### Emphasize how the backstory's experiences directly contribute to the agent’s current capabilities and responsibilities.
-### This approach for the notion_agent enhances its role as a central hub for data management and 
-### coordination within the marketing campaign framework, ensuring that all campaign information is accurate, up-to-date, and accessible
   notion_agent_task: 
     agent: notion_agent
     description: >
@@ -62,6 +60,7 @@
   content_strategy_agent_task:
     agent: content_strategy_agent
     description: >
+      - Develop content strategies incorporating direct feedback from market research and social media performance analytics.
       - Develop and distribute SEO-optimized content across platforms.
       - Create and manage a content calendar aligned with marketing goals.
       - Oversee content production, ensuring SEO best practices.
@@ -75,33 +74,39 @@
   social_media_agent_task:
     agent: social_media_agent
     description: >
+      - Generate detailed reports on social media performance metrics, providing these insights to marketing and content strategy agents.
+      - Strategically manage and synchronize content posting across all major social media platforms, ensuring optimal timing and engagement.
+      - Utilize advanced analytics to track engagement metrics and refine social media strategies in real time.
+      - Work in tandem with content strategists and platform-specific specialists to develop platform-optimized campaigns that maximize reach and engagement.
       - Orchestrate the creation and distribution of post and ad campaign content across all social media platforms.
-      - Request post and ad campaign scheduling from notion_agent
+      - Request post and ad campaign scheduling from notion_agent.
       - Use social media management tools to Coordinate scheduling and posting of content across social media platforms.
       - Monitor engagement metrics and adjust content strategies based on data.
       - Collaborate with platform-specific agents to optimize content.
     expected_output: >
-      A comprehensive report on social media activities, engagement metrics, and strategy adjustments, formatted in markdown and sent via SMS.
+      Comprehensive reports on social media performance, showcasing engagement trends, campaign adjustments, and strategic insights for ongoing improvement, formatted in markdown and delivered through an interactive dashboard.
     tools: [social_media_management_tool, analytics_tool]
 
   facebook_agent_task:
    agent: facebook_agent
    description: >
-    - Utilize the Meta Ads API to manage all aspects of Facebook campaigns.
-    - Authenticate using OAuth 2.0 to obtain access tokens necessary for interacting with the Meta API.
-    - Use the Graph API to create and manage posts on Facebook Pages, including uploading images and linking to external content.
-    - Create and manage ad campaigns, set up ad sets within these campaigns with specific targeting, budget, and scheduling strategies.
-    - Design and manage individual ads, modifying creative elements, setting targeting specifics, and adjusting budget allocations.
-    - Fetch detailed analytics about campaign performance using the Insights API, analyzing metrics like impressions, clicks, and conversion rates.
-    - Implement the Facebook Pixel to track user activities on websites for retargeting and conversion tracking.
-    - Utilize the Conversion API to send server-side events to Facebook, ensuring data accuracy and compliance with browser restrictions on cookies.
+    - Manage Facebook ad campaigns end-to-end using the Meta Ads API, ensuring all campaigns are optimized for maximum engagement and ROI.
+    - Secure necessary authentication via OAuth 2.0 to access Meta APIs, maintaining robust security protocols.
+    - Employ the Graph API for dynamic management of Facebook Page content, ensuring all posts are timely, relevant, and aligned with campaign goals.
+    - Strategically create and manage ad campaigns, employing specific targeting, budgeting, and scheduling strategies to increase conversion rates by at least 20%.
+    - Customize ad designs and targeting parameters based on real-time performance data, aiming to enhance click-through and conversion rates.
+    - Analyze campaign performance extensively using the Insights API, focusing on key metrics such as impressions, clicks, and conversion rates to refine future campaigns.
+    - Integrate Facebook Pixel and Conversion API to enhance tracking accuracy and improve retargeting efficiency, ensuring compliance with the latest web privacy standards.
    expected_output: >
-    Detailed CRUD log and performance report of Facebook campaigns, including A/B testing outcomes, engagement analytics, and insights from ad performance analytics, formatted in markdown and sent via more appropriate channels like email or a web-based dashboard.
+    Comprehensive social media performance reports, aiding in strategic decisions and campaign adjustments.
    tools: [facebook_api_tool]
 
   instagram_agent_task:
     agent: instagram_agent
     description: >
+      - Strategize and execute Instagram campaigns leveraging advanced features like Stories, Reels, and IGTV to maximize user engagement and follower growth.
+      - Analyze and adapt content strategies based on comprehensive analytics of user behavior, engagement rates, and content performance.
+      - Collaborate with high-profile influencers to design and implement co-branded content that enhances visibility and diversifies audience reach.
       - Utilize the Meta Ads API to manage all aspects of Instagram campaigns.
       - Authenticate using OAuth 2.0 to obtain access tokens necessary for interacting with the Meta API.
       - Use the Graph API to create and manage posts on Instagram, including uploading images, stories, and IGTV content.
@@ -111,15 +116,15 @@
       - Implement the Instagram Pixel (part of the Facebook Pixel integration) to track user activities on websites for retargeting and conversion tracking.
       - Utilize the Conversion API to send server-side events to Instagram, ensuring data accuracy and compliance with browser restrictions on cookies.
     expected_output: >
-      Detailed CRUD log and performance report of Instagram campaigns, including influencer collaborations, engagement analytics, and insights from ad performance analytics, formatted in markdown and sent via more appropriate channels like email or a web-based dashboard.
-    tools: [instagram_api_tool] 
+      Detailed reports on Instagram campaign performance, including engagement rates, follower growth statistics, influencer collaboration outcomes, and strategic insights for ongoing content refinement, formatted in markdown and shared with stakeholders.
+    tools: [social_media_management_tool, analytics_tool] 
 
   linkedin_agent_task:
     agent: linkedin_agent
     description: >
-      - Oversee LinkedIn content and campaign management.
-      - Utilize LinkedIn Analytics to refine strategies.
-      - Engage with networks to foster strategic partnerships.
+       - Strategically manage LinkedIn content and campaigns to enhance brand presence and foster professional relationships.
+       - Monitor and analyze engagement through LinkedIn Analytics to continually refine content and networking strategies for optimal lead generation.
+       - Initiate and develop strategic partnerships through targeted networking and outreach efforts on LinkedIn.
     expected_output: >
       A comprehensive LinkedIn campaign report detailing content strategies, networking outcomes, and analytics insights, formatted in markdown and sent via SMS.
     tools: [linkedin_marketing_solutions_tool]
@@ -127,22 +132,10 @@
   pinterest_agent_task:
    agent: pinterest_agent
    description: >
-    - Manage Pinterest content and advertising campaigns using the Pinterest API.
-    - Use API functionalities to create, run, edit, and manage ad campaigns with features such as audience targeting, bulk ads management, and keyword targeting.
-    - Utilize the Ads analytics to fetch detailed performance metrics including impressions, clicks, and conversion rates.
-    - Manage product catalogs using Pinterest's API for Shopping, enabling real-time updates and maintenance of product data.
-    - Implement Pinterest tags and use the Conversion API for enhanced tracking of user actions and conversion optimization.
+    - Strategically design and manage pinboards and advertising campaigns on Pinterest to maximize traffic and enhance e-commerce conversions.
+    - Leverage advanced visual search tools and analytics to refine pin content and structure, enhancing user engagement and interaction.
+    - Continuously analyze pin performance using Pinterest Analytics, applying insights to optimize ongoing and future pin strategies.
   expected_output: >
-    Detailed performance analysis of Pinterest campaigns, including visual strategy effectiveness and conversion rates, formatted in markdown and sent via more appropriate channels like email or a web-based dashboard.
+    Detailed reports on Pinterest campaign performance, including traffic metrics, engagement rates, conversion statistics, and strategic recommendations for pin optimization, formatted in markdown and shared with the marketing team.
   tools: [pinterest_ad_manager_tool]
-
-
-  marketing_reporting_analyst_task:
-    agent: marketing_reporting_analyst_agent
-    description: >
-      - Analyze campaign performance across all channels.
-      - Provide insights to refine and optimize marketing strategies based on data.
-    expected_output: >
-      A detailed performance analysis report across all marketing channels, offering strategic recommendations, stored in markdown format and sent via SMS.
-    tools: [analytics_tool]
 
